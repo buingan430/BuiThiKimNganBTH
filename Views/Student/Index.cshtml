@@ -1,0 +1,24 @@
+@using PTPMQL.Models
+<h2>Danh sach sinh vien</h2>
+<hr>
+<table class ="table border">
+    <tr>
+        <th>
+            <label >MA SINH VIEN</label>
+        </th>
+       <th>
+        <label>TEN SINH VIEN</label>
+       </th>
+       <th>
+        <label>TUOI</label>
+       </th>
+    </tr>
+    @foreach (var item in ViewData["Students"] as List<Student>)
+    {
+       <tr>
+            <td>@item.StudentID</td>
+            <td>@item.StudentName</td>
+            <td>@item.StudentAge</td>
+       </tr> 
+    }
+</table>

@@ -1,9 +1,14 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome to PMPL
-    </h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form asp-action= "Index">
+    <label>Enter Name:</label>
+    <input type="text" name ="FullName">
+    <input type="submit" value ="Save">
+    <br>
+    <label> Enter Email:></label>
+    <input type="text" name ="Email">
+    <input type="submit" value ="Save">
+    <br>
+</form>
+<h2>@ViewBag.name</h2>
