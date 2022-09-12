@@ -7,16 +7,16 @@ namespace BuiThiKimNganBTH.Controllers
     {
         public IActionResult Index()
         {
-        /// List<Student> stdList = new List<Student>();
-         //   {
-          //      new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-         //       new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-         //       new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-         //       new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-         //       new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-         //       new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-         //   };
-         //   ViewData["Students"] = stdList;
+         List<Student> stdList = new List<Student>();
+           {
+                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+            };
+            ViewData["Students"] = stdList;
             return View();
         }
         [HttpPost]
