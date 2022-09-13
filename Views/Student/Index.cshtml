@@ -1,24 +1,13 @@
-@using PTPMQL.Models
-<h2>Danh sach sinh vien</h2>
-<hr>
-<table class ="table border">
-    <tr>
-        <th>
-            <label >MA SINH VIEN</label>
-        </th>
-       <th>
-        <label>TEN SINH VIEN</label>
-       </th>
-       <th>
-        <label>TUOI</label>
-       </th>
-    </tr>
-    @foreach (var item in ViewData["Students"] as List<Student>)
-    {
-       <tr>
-            <td>@item.StudentID</td>
-            <td>@item.StudentName</td>
-            <td>@item.StudentAge</td>
-       </tr> 
-    }
-</table>
+<h2>Thông tin sinh viên - @ViewBag.message</h2>
+<form asp-action="Index">
+    <label>StudentID:</label>
+    <input type="number" name="StudentID">
+    <br>
+     <label>StudentName:</label>
+    <input type="text" name="StudentName">
+    <br>
+     <label>StudentAge:</label>
+    <input type="number" name="StudentAge">
+    <input type="submit" value="Save">
+</form>
+

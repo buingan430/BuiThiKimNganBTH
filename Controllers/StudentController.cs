@@ -5,18 +5,24 @@ namespace BuiThiKimNganBTH.Controllers
 {
     public class StudentController : Controller
     {
+        [HttpPost]
+ public IActionResult Index(Student std)
+{
+    ViewBag.message = std.StudentID+"-"+std.StudentName+"-"+std.StudentAge   ;
+    return View();
+}
         public IActionResult Index()
         {
-         List<Student> stdList = new List<Student>();
-           {
-                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-                new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
-            };
-            ViewData["Students"] = stdList;
+        //  List<Student> stdList = new List<Student>();
+        //    {
+        //         new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+        //         new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+        //         new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+        //         new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+        //         new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+        //         new Student {StudentID = 1, StudentName = "A", StudentAge = 18};
+        //     };
+        //     ViewData["Students"] = stdList;
             return View();
         }
         [HttpPost]
